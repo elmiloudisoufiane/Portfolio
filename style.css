@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Rubik", sans-serif;
+    
+}
+
+.logo{
+    font-size: 2em;
+    color: #ac5aff;
+    font-weight: 600;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to right, #01062e, #030d5b);
+    height: 10vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
+}
+
+header li a{
+    margin: 20px;
+    font-size: 1em;
+    color: white;
+    transition: 400ms;
+}
+
+header li a:hover{
+    color: #ac5aff;
+} 
+
+ul li i{
+    font-size: 30px;
+    transition: 300ms;
+    margin: 20px;
+    color: #6a01d4;
+}
+
+/* section 1 */
+
+.section1{
+    height: 100vh;
+    background: linear-gradient(to right, #01062e, #030d5b);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    justify-content: space-around;
+    height: 110vh;
+}
+
+.txt{
+    margin: 0px 10px;
+    color: white;
+    font-size: 1.3em;
+    width: 45vw;
+}
+
+#button-projet{
+    font-size: 0.8em;
+    padding: 14px 7em;
+    border-radius: 7px;
+    transition: 500ms;
+    background-color: #9123ff;
+    color: white;
+    margin: 10px;
+}
+
+#button-projet:hover{
+    background-color: #6a01d4;
+}
+
+.color{
+    background-image: linear-gradient(45deg, #ff0a78, #5773ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+}
+
+ul li{
+    display: inline;
+}
+
+.txt p{
+    font-size: 0.75em;
+    word-spacing: 5px;
+    line-height: 20px;
+}
+
+.icons i:hover{
+    color: #9123ff;
+    scale: 1.2;
+}
+
+.button{
+    font-size: 0.8em;
+    padding: 14px 7em;
+    border-radius: 7px;
+    transition: 500ms;
+    background-color: #9123ff;
+    color: white;
+}
+
+.button:active{
+    background-color: #6a01d4;
+    scale: 0.5;
+}
+
+.img{
+    width: 43vw;
+}
+
+/* section 2 */
+
+.section2{
+    height: 85vh;
+}
+
+.section2 h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.card1{
+    background: url(music.png);
+    background-position: center ;
+}
+
+.card2{
+    background: url(car.png);
+}
+
+.card3{
+    background: url(money.png);
+}
+
+.card4{
+    background: url(game.png);
+}
+
+.card5{
+    background: url(login.png);
+}
+
+.card6{
+    background: url(curd.png);
+}
+
+.card-front{
+    background-size: cover;
+    width: 400px;
+    height: 190px;
+    border-radius: 10px;
+    position: relative;
+    margin: 30px 10px;
+}
+
+.section2 a{
+    background-color: rgb(75, 75, 250);
+    border-radius: 5px;
+    color: white;
+    padding: 3px 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    height: 50vh;
+    flex-wrap: wrap ;
+}
+
+/* section 3 */
+
+.section3{
+    background: linear-gradient(to right, #01062e, #030d5b);
+    padding: 0px 10px;
+    height: 60vh;
+}
+
+.started{
+    color: white;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 0px;
+}
+
+.started h1{
+    font-size: 3em;
+}
+
+.started h1 span{
+    color: #ac5aff;
+}
+
+.started a{
+    background-color: #9225ff;
+    padding: 15px 100px;
+    border-radius: 10px;
+    color: white;
+}
+
+.started a:hover{
+    background-color: #7517d3;
+}
+
+/* section 4 */
+
+.section4{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    line-height: 40px;
+    color: black;
+    flex-wrap: wrap;
+}
+
+.list{
+    width: 250px;
+    padding: 30px;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+.list ul li{
+    display: block;
+}
+
+.list ul li a{
+    color: #7517d3;
+}
+
+.list ul li a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.title{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* section 5 */
+
+.section5{
+    border-top: solid 1px black;
+    padding: 10px;
+    text-align: center;
+}
+
+.list_contaner{
+    display: flex;
+    justify-content: space-around;
+}
+
+@keyframes appear {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);
+}
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .card-front, .started {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
