@@ -7,7 +7,7 @@
 }
 
 .logo{
-    font-size: 2em;
+    font-size: 1.5em;
     color: #ac5aff;
     font-weight: 600;
 }
@@ -25,7 +25,7 @@ header{
 
 header li a{
     margin: 20px;
-    font-size: 1em;
+    font-size: 0.9em;
     color: white;
     transition: 400ms;
 }
@@ -61,21 +61,7 @@ ul li i{
     margin: 0px 10px;
     color: white;
     font-size: 1.3em;
-    width: 45vw;
-}
-
-#button-projet{
-    font-size: 0.8em;
-    padding: 14px 7em;
-    border-radius: 7px;
-    transition: 500ms;
-    background-color: #9123ff;
-    color: white;
-    margin: 10px;
-}
-
-#button-projet:hover{
-    background-color: #6a01d4;
+    width: 40vw;
 }
 
 .color{
@@ -96,8 +82,8 @@ ul li{
 }
 
 .icons i:hover{
-    color: #9123ff;
-    scale: 1.2;
+    color: #a863ec;
+    scale: 1.16;
 }
 
 .button{
@@ -115,19 +101,110 @@ ul li{
 }
 
 .img{
-    width: 43vw;
+    width: 40vw;
+}
+
+/* MY SKILLS */
+
+.Skills{
+    height: 50vh;
+    text-align: center;
+}
+
+.Skills h1{
+    font-size: 2em;
+    padding-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.container-of-icons-skils{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(200px * 10);
+    animation: scroll 20s linear infinite;
+    height:200px;
+}
+
+.container-of-icons-skils div i{
+    font-size: 4em;
+    color: #9123ff;
+    transition: scroll 400ms;
+    width: 120px;
+
+}
+
+.designs-icons-card{
+    padding: 30px;
+    background-color: #01062e;
+    border-radius: 5px;
+    margin-left: 30px;
+    cursor: pointer;
+    border: #01062e 1px solid;
+}
+
+.designs-icons-card:hover {
+  border: #9123ff 1px solid;
+  box-shadow: #b87ff1 1px 3px 10px 5px;
+
+}
+
+.designs-icons-card p{
+    font-size: 0.9em;
+    padding-top: 15px;
+    color: #9123ff;
+}
+
+.slider:hover .container-of-icons-skils {
+  animation-play-state: paused;
+}
+
+.slider{
+    overflow: hidden;
+    display: flex;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* section 2 */
 
 .section2{
-    height: 85vh;
+    height: 100vh;
 }
 
 .section2 h1{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
     font-size: 2em;
+}
+
+.card{
+    overflow: auto;
+    border-radius: 5px;
+    border: 1px gray solid;
+    margin: 5px 0px;
+
+}
+
+.content{
+    padding: 10px;    
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.content i{
+    cursor: pointer;
 }
 
 .card1{
@@ -157,11 +234,8 @@ ul li{
 
 .card-front{
     background-size: cover;
-    width: 400px;
-    height: 190px;
-    border-radius: 10px;
-    position: relative;
-    margin: 30px 10px;
+    width: 390px;
+    height: 180px;
 }
 
 .section2 a{
@@ -183,12 +257,41 @@ ul li{
     flex-wrap: wrap ;
 }
 
-/* section 3 */
+
 
 .section3{
     background: linear-gradient(to right, #01062e, #030d5b);
-    padding: 0px 10px;
-    height: 60vh;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.copyright{
+    color: white;
+    margin-left: 20px;
+}
+
+.input-same-desgine{
+    background-color: #02128b;
+    border: none;
+    padding: 10px 300px  10px 10px;
+    margin-top: 10px;
+    text-align: left;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.input-same-desgine::placeholder{
+    color: white;
+}
+
+textarea{
+    height: 80px;
 }
 
 .started{
@@ -196,76 +299,36 @@ ul li{
     display: block;
     justify-content: center;
     text-align: center;
-    padding: 120px 0px;
 }
 
 .started h1{
-    font-size: 3em;
+    margin-bottom: 40px;
 }
 
-.started h1 span{
+.started span{
+    color: #9123ff;
+    }
+
+.started i{
+    margin-right: 5px;
     color: #ac5aff;
 }
 
-.started a{
-    background-color: #9225ff;
-    padding: 15px 100px;
-    border-radius: 10px;
-    color: white;
+.submit{
+    padding: 10px 30px;
+    background-color: #9123ff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 400ms;
 }
 
-.started a:hover{
-    background-color: #7517d3;
+.submit:active{
+    scale: 0.9;
 }
 
-/* section 4 */
 
-.section4{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    line-height: 40px;
-    color: black;
-    flex-wrap: wrap;
-}
-
-.list{
-    width: 250px;
-    padding: 30px;
-    flex-grow: 1;
-    flex-basis: 200;
-}
-
-.list ul li{
-    display: block;
-}
-
-.list ul li a{
-    color: #7517d3;
-}
-
-.list ul li a:hover{
-    text-decoration: underline;
-    color: blue;
-}
-
-.title{
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-/* section 5 */
-
-.section5{
-    border-top: solid 1px black;
-    padding: 10px;
-    text-align: center;
-}
-
-.list_contaner{
-    display: flex;
-    justify-content: space-around;
-}
+/* ANIMATION */
 
 @keyframes appear {
     from {
@@ -278,8 +341,45 @@ ul li{
     }
   }
 
-  .card-front, .started {
+  .card, .started {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
   }
+
+   #loading {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      color: white;
+      flex-direction: column;
+    }
+
+.logo-icon {
+  font-size: 60px;
+  color: #6a01d4;
+  animation: pulse 1s infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+.loader {
+  display: none;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
