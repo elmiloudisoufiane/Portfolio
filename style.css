@@ -1,3 +1,12 @@
+:root{
+    --primary-color: #6a01d4;
+    --secondary-color: #ac5aff;
+    --background-color: #01062e;
+    --text-color: white;
+    --hover-color: #5b05b1;
+    --background-gradient: linear-gradient(to right, #01062e, #030d5b);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,37 +16,20 @@
 
 /* LOADING SCREEN */
 
-#loading {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  color: white;
-  flex-direction: column;
+@keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+.spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #fff;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
 }
-
-.logo-icon {
-  font-size: 60px;
-  color: #6a01d4;
-  animation: pulse 1s infinite;
-  margin-bottom: 20px;
-}
-
-@keyframes pulse {
-  0%   { transform: scale(1); opacity: 1; }
-  50%  { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-
-.loader {
-  display: none;
-}
-
 
 html {
   scroll-behavior: smooth;
@@ -47,14 +39,14 @@ html {
 
 .Home{
     height: 100vh;
-    background: linear-gradient(to right, #01062e, #030d5b);
+    background: var(--background-gradient);
 }
 
 /* LOGO */
 
 .logo{
     font-size: 1.5em;
-    color: #ac5aff;
+    color: var(--secondary-color);
     font-weight: 600;
 }
 
@@ -64,7 +56,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(to right, #01062e, #030d5b);
+    background: var(--background-gradient);
     height: 10vh;
     position: fixed;
     width: 100vw;
@@ -78,16 +70,12 @@ header li{
 header li a{
     margin: 20px;
     font-size: 0.9em;
-    color: white;
+    color: var(--text-color);
     transition: 400ms;
 }
 
 header li a:hover{
-    color: #ac5aff;
-}
-
-.Home{
-    height: 100vh;
+    color: var(--hover-color);
 }
 
 .container{
@@ -99,7 +87,7 @@ header li a:hover{
 }
 
 .texte{
-    color: white;
+    color: var(--text-color);
     font-size: 1.2em;
     width: 45vw;
 }
@@ -113,21 +101,17 @@ header li a:hover{
 /* VISIT BUTTON */
 
 #visit-project-button{
-    background-color: #9123ff;
-    padding: 12px 50px;
-    color: white;
-    font-size: 0.8em;
+    background-color: var(--secondary-color);
+    padding: 10px 50px;
+    color: var(--text-color);
+    font-size: 0.7em;
     border-radius: 5px;
     transition: 400ms;
-    
-}
-
-#visit-project-button:active{
-    scale: 0.9;
+    cursor: pointer;
 }
 
 #visit-project-button:hover{
-    background-color: #5b05b1;
+    background-color: var(--hover-color);
 }
 
 .color{
@@ -144,7 +128,7 @@ header li a:hover{
 /* MY SKILLS */
 
 .Skills{
-    background: linear-gradient(to right, #01062e, #030d5b);
+    background: var(--background-gradient);
 }
 
 .display-flex{
@@ -152,13 +136,6 @@ header li a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.Skills h1{
-    font-size: 2em;
-    padding-top: 10vh;
-    color: white;
-    margin-bottom: 10vh;
 }
 
 /* SCROLLING */
@@ -175,14 +152,14 @@ header li a:hover{
 
 .container-of-icons-skils div i{
     font-size: 4em;
-    color: #9123ff;
+    color: var(--text-color);
     transition: scroll 400ms;
     width: 100px;
 }
 
 .designs-icons-card{
     padding: 30px;
-    background-color: #01062e;
+    background-color: var(--background-color);
     border-radius: 8px;
     margin-left: 30px;
     cursor: pointer;
@@ -191,15 +168,14 @@ header li a:hover{
 }
 
 .designs-icons-card:hover {
-  border: #9123ff 1px solid;
-  box-shadow: #b87ff1 1px 2px 10px 3px;
-
+  border: var(--primary-color) 1px solid;
+  box-shadow: var(--primary-color) 1px 2px 10px 3px;
 }
 
 .designs-icons-card p{
     font-size: 0.9em;
     padding-top: 15px;
-    color: #9123ff;
+    color: var(--text-color);
 }
 
 .slider:hover .container-of-icons-skils {
@@ -229,100 +205,18 @@ header li a:hover{
 
 .Project h1{
     text-align: center;
-    margin-bottom: 5vh;
     font-size: 2em;
-    color: #ac5aff;
-}
-
-.card{
-    overflow: auto;
-    border-radius: 5px;
-    border: 1px #b87ff1 solid;
-    margin: 5px 0px;
-    background-color: #01062e;
-    color: white;
-}
-
-.content{
-    padding: 10px;    
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px;
-}
-
-.content i{
-    cursor: pointer;
-}
-
-.content h3{
-    font-size: 1em;
-    margin-bottom: 5px;
-}
-
-.content p{
-    font-size: 0.7em;
-}
-
-.card1{
-    background: url(music.png);
-    background-position: center ;
-}
-
-.card2{
-    background: url(car.png);
-}
-
-.card3{
-    background: url(money.png);
-}
-
-.card4{
-    background: url(game.png);
-}
-
-.card5{
-    background: url(login.png);
-}
-
-.card6{
-    background: url(curd.png);
-}
-
-.card-front{
-    background-size: cover;
-    width: 390px;
-    height: 180px;
-}
-
-.Project a{
-    background-color: rgb(75, 75, 250);
-    border-radius: 5px;
-    color: white;
-    padding: 3px 10px;
-    position: absolute;
-    bottom: 0;
-}
-
-.cards{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 20px;
-    height: 50vh;
-    flex-wrap: wrap ;
+    color: var(--text-color);
 }
 
 /* CANTACT */
 
 .Cantact{
-    background: linear-gradient(to right, #01062e, #030d5b);
+    background: var(--background-gradient);
     height: 100vh;
     display: flex;
     justify-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: relative;
 }
@@ -332,13 +226,14 @@ header li a:hover{
 .icons {
     display: flex;
     align-items: center;
-    color: #b87ff1;
+    color: var(--secondary-color);
     transition: 400ms;
+    margin-left: 20px;
 }
 
 .icons:hover{
-    color: #5b05b1;
-    scale: 1.05;
+    color: var(--hover-color); ;
+    scale: 1.06;
 }
 
 .Cantact ul li i{
@@ -349,21 +244,26 @@ header li a:hover{
 
 .Cantact ul li a{
     font-size: 0.9em;
+    width: 120px;
+    margin-bottom: 5px;
 }
 
 .Cantact ul {
     margin-top: 10vh;
 }
 
-.copyright{
-    color: white;
+.all-social-media{
+    color: var(--text-color);
+    width: 50vw;
+    text-align: center;
 }
 
-.copy{
+.Copyright{
     position: absolute;
     bottom: 5px;
     font-size: 0.85em;
     color: #cecbcb;
+    left: 5px;
 }
 
 /* INPUT DESGINE */
@@ -377,20 +277,16 @@ header li a:hover{
     text-align: left;
     border-radius: 5px;
     outline: none;
-    color: white;
+    color: var(--text-color);
     margin-right: 20px;
 }
 
 .input-same-desgine::placeholder{
-    color: white;
-}
-
-textarea{
-    height: 80px;
+    color: var(--text-color);
 }
 
 .started{
-    color: white;
+    color: var(--text-color);
     display: block;
     justify-content: center;
     text-align: center;
@@ -402,23 +298,23 @@ textarea{
 }
 
 .started span{
-    color: #9123ff;
+    color: var(--secondary-color);
     }
 
 .started i{
     margin-right: 5px;
-    color: #ac5aff;
+    color: var(--secondary-color);
     font-size: 1.5em;
 }
 
 .submit{
     padding: 12px 50px;
-    background-color: #9123ff;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 7px;
     cursor: pointer;
     transition: 400ms;
-    color: white;
+    color: var(--text-color);
 }
 
 .submit:active{
@@ -426,10 +322,10 @@ textarea{
 }
 
 .submit:hover{
-    background-color: #5b05b1;
+    background-color: var(--hover-color);
 }
 
-/* ANIMATION */
+/* DIV ANIMATION */
 
 @keyframes appear {
     from {
@@ -442,8 +338,8 @@ textarea{
     }
   }
 
-  .card, .started {
+.card, .started {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
-  }
+}
