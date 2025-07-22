@@ -3,8 +3,10 @@
     --secondary-color: #ac5aff;
     --background-color: #01062e;
     --text-color: white;
+    --text-color-light: #000000;
     --hover-color: #5b05b1;
-    --background-gradient: linear-gradient(to right, #01062e, #030d5b);
+    --background-gradient-dark-mode: linear-gradient(to right, #01062e, #030d5b);
+    --background-gradient-light-mode: linear-gradient(to right, #e0eafc, #cfdef3);
 }
 
 *{
@@ -35,47 +37,110 @@ html {
   scroll-behavior: smooth;
 }
 
+body .header{
+    background: var(--background-gradient-dark-mode);
+    transition: 0.3s ease;
+    color: var(--text-color);
+}
+
+body{
+    background: var(--background-gradient-dark-mode);
+    transition: 0.3s ease;
+    color: var(--text-color);
+}
+
+body a{
+    color: var(--text-color);
+}
+
+body.light-mode .fa-moon{
+    color: var(--text-color-light);
+    font-size: 1.2em;
+}
+
+body.light-mode, .header{
+    background: var(--background-gradient-light-mode);
+    color: var(--text-color-light);
+}
+
+body.light-mode .header{
+    background: var(--background-gradient-light-mode);
+    color: var(--text-color-light);
+}
+
+body.light-mode a{
+    color: var(--text-color-light);
+}
+
+body.light-mode .input-same-desgine{
+    background-color: #ffffff;
+    color: var(--text-color-light);
+}
+
+body.light-mode .input-same-desgine::placeholder{
+        color: var(--text-color-light);
+    }
+
+body.light-mode .logo{
+    color: var(--primary-color);
+}
+
+.fa-moon{
+    display: none;
+}
+
 /* HOME */
 
 .Home{
     height: 100vh;
-    background: var(--background-gradient);
 }
 
 /* LOGO */
 
 .logo{
     font-size: 1.5em;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 /* HEADER STYLE */
 
-header{
+.header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: var(--background-gradient);
-    height: 10vh;
+    height: 7vh;
     position: fixed;
     width: 100vw;
     z-index: 99;
 }
 
-header li{
+.icon-menu-list{
+    display: none;
+}
+
+.header li{
     display: inline;
 }
 
-header li a{
+.header li a{
     margin: 20px;
-    font-size: 0.9em;
-    color: var(--text-color);
+    font-size: 1em;
     transition: 400ms;
 }
 
-header li a:hover{
+.header li a:hover{
     color: var(--hover-color);
+}
+
+#toggle{
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .container{
@@ -87,7 +152,6 @@ header li a:hover{
 }
 
 .texte{
-    color: var(--text-color);
     font-size: 1.2em;
     width: 45vw;
 }
@@ -127,18 +191,19 @@ header li a:hover{
 
 /* MY SKILLS */
 
-.Skills{
-    background: var(--background-gradient);
+#my-skills{
+    text-align: center;
+    font-size: 2em;
 }
 
 .display-flex{
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* SCROLLING */
+/* SKILLS SCROLLING */
 
 .container-of-icons-skils{
     display: flex;
@@ -152,30 +217,26 @@ header li a:hover{
 
 .container-of-icons-skils div i{
     font-size: 4em;
-    color: var(--text-color);
     transition: scroll 400ms;
     width: 100px;
 }
 
 .designs-icons-card{
     padding: 30px;
-    background-color: var(--background-color);
-    border-radius: 8px;
-    margin-left: 30px;
+    border-radius: 7px;
+    margin-left: 40px;
     cursor: pointer;
-    border: #01062e 1px solid;
-    border: 1px solid #5b05b1;
+    box-shadow: #c7c7c7 0px 0px 15px 0px;
 }
 
 .designs-icons-card:hover {
-  border: var(--primary-color) 1px solid;
-  box-shadow: var(--primary-color) 1px 2px 10px 3px;
+  border: #c7c7c7 1px solid;
+  box-shadow: #c7c7c7 1px 2px 10px 3px;
 }
 
 .designs-icons-card p{
     font-size: 0.9em;
     padding-top: 15px;
-    color: var(--text-color);
 }
 
 .slider:hover .container-of-icons-skils {
@@ -200,19 +261,16 @@ header li a:hover{
 
 .Project{
     height: 100vh;
-    background: linear-gradient(to right, #01062e, #030d5b);
 }
 
 .Project h1{
     text-align: center;
     font-size: 2em;
-    color: var(--text-color);
 }
 
 /* CANTACT */
 
 .Cantact{
-    background: var(--background-gradient);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -228,7 +286,15 @@ header li a:hover{
     align-items: center;
     color: var(--secondary-color);
     transition: 400ms;
-    margin-left: 20px;
+    font-size: 2em;
+    margin: 0px 20px;
+}
+
+.center-form-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
 .icons:hover{
@@ -236,33 +302,25 @@ header li a:hover{
     scale: 1.06;
 }
 
-.Cantact ul li i{
-    font-size: 1.5em;
-    transition: 300ms;
-    margin: 15px 10px;
-}
-
-.Cantact ul li a{
-    font-size: 0.9em;
-    width: 120px;
-    margin-bottom: 5px;
-}
-
 .Cantact ul {
-    margin-top: 10vh;
+    margin-top: 3vh;
 }
 
 .all-social-media{
-    color: var(--text-color);
     width: 50vw;
     text-align: center;
+}
+
+.icons-of-my-social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Copyright{
     position: absolute;
     bottom: 5px;
     font-size: 0.85em;
-    color: #cecbcb;
     left: 5px;
 }
 
@@ -286,7 +344,6 @@ header li a:hover{
 }
 
 .started{
-    color: var(--text-color);
     display: block;
     justify-content: center;
     text-align: center;
@@ -325,21 +382,81 @@ header li a:hover{
     background-color: var(--hover-color);
 }
 
-/* DIV ANIMATION */
+/* MEDIA QUERIES */
 
-@keyframes appear {
-    from {
-      opacity: 0;
-      clip-path: inset(100% 100% 0 0);
-}
-    to {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
+@media (max-width: 768px) {
+
+    .header{
+        height: 7vh;
     }
-  }
 
-.card, .started {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dispeared{
+        display: none;
+    }
+
+    .icon-menu-list{
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 1.1em;
+        align-items: center;
+        justify-content: space-around;
+        justify-content: center;
+        :hover{
+            color: var(--hover-color);
+        }
+    }
+
+    #dispeared-portfolio{
+        display: none;
+    }
+
+    .texte{
+        margin-top: 15vh;
+        width: 95vw;
+        text-align: center;
+    }
+
+    .img{
+        width: 90vw;
+        margin-top: 20px;
+    }
+
+    .Cantact{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .started{
+        width: 95vw;
+    }
+
+    .started h1{
+        font-size: 2em;
+    }
+
+    .all-social-media{
+        width: 90vw;
+    }
+
+    .icons{
+        margin-top: 20px;
+    }
+
+    .input-same-desgine{
+        width: 80vw;
+        margin-right: 0;
+    }
+
+    .Copyright{
+        position: relative;
+        bottom: 10px;
+        left: 0;
+        text-align: center;
+    }
+
 }

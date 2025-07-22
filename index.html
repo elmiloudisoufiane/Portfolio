@@ -15,15 +15,22 @@
     
     <section id="Home" class="Home">
         <div>
-            <header>
-                <a href="#" class="logo"><i class="fa-solid fa-code"></i> Portfolio</a>
-                <ul type = "none">
+            <div class="header">
+                <a href="#" class="logo"><i class="fa-solid fa-code"></i><span id="dispeared-portfolio"> Portfolio</span></a>
+
+                <a class="icon-menu-list" title="Home" href="#Home"><i class="fa-solid fa-house"></i></a>
+                <a class="icon-menu-list" title="Skills" href="#Skills"><i class="fa-solid fa-laptop-code"></i></a>
+                <a class="icon-menu-list" title="Project" href="#Project"><i class="fa-solid fa-folder"></i></a>
+                <a class="icon-menu-list" title="Contact" href="#Contact"><i class="fa-solid fa-envelope"></i></a>
+
+                <ul id="dispeared" type = "none">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#Skills">Skills</a></li>
                     <li><a href="#Project">Project</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
-            </header>
+                <button id="toggle"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+            </div>
 
             <div>
                 <div class="container">
@@ -44,6 +51,8 @@
     </section>
 
     <section id="Skills" class="Skills">
+
+        <h1 id="my-skills">MY SKILLS</h1>
         <div class="display-flex">
             <div class="slider">
                 <div class="container-of-icons-skils">
@@ -77,37 +86,39 @@
             <h1>ALL MY SOCIAL MEDIA</h1>
 
             <div>
-                <ul type="none">
-                    <li><a title="instagram" class="icons" href="https://www.instagram.com/elmiloudisoufiane/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a title="facebook" class="icons" href="https://www.facebook.com/elmiloudisoufiane1"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                    <li><a title="github" class="icons" href="https://github.com/elmiloudisoufiane"><i class="fa-brands fa-github"></i> Github</a></li>
-                    <li><a title="X" class="icons" href="https://x.com/s2jokv"><i class="fa-brands fa-x-twitter"></i> X</a></li>
-                    <li><a title="linkedin" class="icons" href="https://www.linkedin.com/in/soufiane-elmiloudi-7795b8360/"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                <ul class="icons-of-my-social-media" type="none">
+                    <li><a title="instagram" class="icons" href="https://www.instagram.com/elmiloudisoufiane/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a title="facebook" class="icons" href="https://www.facebook.com/elmiloudisoufiane1"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a title="github" class="icons" href="https://github.com/elmiloudisoufiane"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a title="X" class="icons" href="https://x.com/s2jokv"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a title="linkedin" class="icons" href="https://www.linkedin.com/in/soufiane-elmiloudi-7795b8360/"><i class="fa-brands fa-linkedin-in"></i></a></li>
                 </ul>
             </div>
-
-            <p class="Copyright">© Copyright 2025 soufiane elmiloudi</p>
             
         </div>
 
-        <div id="Contact" class="started">
-            <h1>Cantact <Span>With Me</Span></h1>
-            <form id="contactForm" action="https://formspree.io/f/xrbknvga" method="POST">
-                <label>
-                    <i class="fa-solid fa-envelope"></i>
-                    <input class="input-same-desgine" required id="email" type="email" name="email" placeholder="Enter your email">
-                    <div class="error-message" id="emailError"></div>
-                </label>
-                <br>
-                <label>
-                    <i class="fa-solid fa-comment"></i>
-                    <textarea class="input-same-desgine" rows="5" required id="message" name="message" placeholder="Enter message..."></textarea>
-                    <div class="error-message" id="messageError"></div>
-                </label>
-                <br>
-                <button class="submit" type="submit">Send</button>
-            </form>
+        <div class="center-form-div">
+                <div id="Contact" class="started">
+                    <h1>Cantact <Span>With Me</Span></h1>
+                    <form id="contactForm" action="https://formspree.io/f/xrbknvga" method="POST">
+                        <label>
+                            <i class="fa-solid fa-envelope"></i>
+                            <input class="input-same-desgine" required id="email" type="email" name="email" placeholder="Enter your email">
+                            <div class="error-message" id="emailError"></div>
+                        </label>
+                        <br>
+                        <label>
+                            <i class="fa-solid fa-comment"></i>
+                            <textarea class="input-same-desgine" rows="5" required id="message" name="message" placeholder="Enter message..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </label>
+                        <br>
+                        <button class="submit" type="submit">Send</button>
+                    </form>
+                </div>
         </div>
+
+                    <p class="Copyright">© Copyright 2025 soufiane elmiloudi</p>
     </section>
 
     <script src="script.js"></script>
