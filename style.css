@@ -16,27 +16,6 @@
     font-family: "Rubik", sans-serif;
 }
 
-/* LOADING SCREEN */
-
-@keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-.spinner {
-            width: 60px;
-            height: 60px;
-            border: 6px solid #fff;
-            border-top: 6px solid #3498db;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 20px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body .header{
     background: var(--background-gradient-dark-mode);
     transition: 0.3s ease;
@@ -109,7 +88,7 @@ body.light-mode .logo{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 7vh;
+    height: 10vh;
     position: fixed;
     width: 100vw;
     z-index: 99;
@@ -196,76 +175,15 @@ body.light-mode .logo{
     font-size: 2em;
 }
 
-.display-flex{
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* SKILLS SCROLLING */
-
-.container-of-icons-skils{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(200px * 10);
-    animation: scroll 25s linear infinite;
-    height:200px;
-    text-align: center;
-}
-
-.container-of-icons-skils div i{
-    font-size: 4em;
-    transition: scroll 400ms;
-    width: 100px;
-}
-
-.designs-icons-card{
-    padding: 30px;
-    border-radius: 7px;
-    margin-left: 40px;
-    cursor: pointer;
-    box-shadow: #c7c7c7 0px 0px 15px 0px;
-}
-
-.designs-icons-card:hover {
-  border: #c7c7c7 1px solid;
-  box-shadow: #c7c7c7 1px 2px 10px 3px;
-}
-
-.designs-icons-card p{
-    font-size: 0.9em;
-    padding-top: 15px;
-}
-
-.slider:hover .container-of-icons-skils {
-  animation-play-state: paused;
-}
-
-.slider{
-    overflow: hidden;
-    display: flex;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* PROJECT */
-
-.Project{
-    height: 100vh;
-}
 
 .Project h1{
     text-align: center;
     font-size: 2em;
+}
+
+.Project{
+    height: 50vh;
 }
 
 /* CANTACT */
